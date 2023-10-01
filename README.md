@@ -1,0 +1,1 @@
+# js-singleton-pattern
