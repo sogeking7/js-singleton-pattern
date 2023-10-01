@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singleton Design Pattern</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="profile" style="display: none">
+        <h1>Welcome <span id="profile-username"></span>!</h1>
+      </div>
+      <div id="form" style="display: flex; gap: 100px">
+        <div class="form-container">
+          <h2>Sign In</h2>
+          <form id="signin-form">
+            <div class="form-group">
+              <label for="signin-username">Username</label>
+              <input type="text" id="signin-username" required />
+            </div>
+            <div class="form-group">
+              <label for="signin-password">Password</label>
+              <input type="password" id="signin-password" required />
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+          </form>
+        </div>
+        <div class="form-container">
+          <h2>Sign Up</h2>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="signup-username">Username</label>
+              <input type="text" id="signup-username" required />
+            </div>
+            <div class="form-group">
+              <label for="signup-password">Password</label>
+              <input type="password" id="signup-password" required />
+            </div>
+            <button type="submit" class="btn" style="margin-bottom: 10px">
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
