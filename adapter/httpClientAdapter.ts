@@ -8,26 +8,26 @@ interface IHttpAdapter {
   getToken(): string;
 }
 
-class HttpClientAdapter implements IHttpAdapter {
-  private httpClient: AxiosClient;
+class axiosClientAdapter implements IHttpAdapter {
+  private axiosClient: AxiosClient;
 
   constructor(baseUrl: string) {
-    this.httpClient = new AxiosClient(baseUrl);
+    this.axiosClient = new AxiosClient(baseUrl);
   }
 
   async get<T>(url: string, options?: RequestOptions): Promise<T> {
-    return this.httpClient.get<T>(url, options);
+    return this.axiosClient.get<T>(url, options);
   }
 
   async delete<T>(url: string, options?: RequestOptions): Promise<T> {
-    return this.httpClient.delete<T>(url, options);
+    return this.axiosClient.delete<T>(url, options);
   }
 
   setToken(token: string): void {
-    this.httpClient.setToken(token);
+    this.axiosClient.setToken(token);
   }
 
   getToken(): string {
-    return this.httpClient.getToken();
+    return this.axiosClient.getToken();
   }
 }
